@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ordering;
@@ -10,4 +11,7 @@ public static class OrderingModule
         return services;
         // Register services related to the Catelog module here
     }
+
+
+    public static IApplicationBuilder UseOrderingModule(this IApplicationBuilder app) { return app; }
 }

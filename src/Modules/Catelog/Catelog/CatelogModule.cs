@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Catelog;
@@ -10,5 +11,7 @@ public static class CatelogModule
         return services;
         // Register services related to the Catelog module here
     }
+
+    public static IApplicationBuilder UseCatelogModule(this IApplicationBuilder app) { return app; }
 
 }
