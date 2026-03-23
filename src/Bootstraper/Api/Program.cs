@@ -1,7 +1,3 @@
-using Catelog;
-using Basket;
-using Ordering;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
